@@ -2,4 +2,8 @@ console.log('hello world!');
 
 let age: number = 20;
 
-//age = 'a';
+if (age < 50)
+    age += 10;
+
+console.log(age);
+
