@@ -43,3 +43,13 @@
 // const enum Size {Small = 1, Medium, Large};
 // let mySize: Size = Size.Medium;
 // console.log(mySize);
+
+function calculateTax(income: number, taxYear = 2022): number {
+    //return 0;
+    //let x;
+    if (taxYear < 2022)
+        return income * 1.2;
+    return income * 1.3;
+}
+// if nothing is declared for taxYear, defaults to 2022, otherwise overrides 2022
+calculateTax(10_000, 2022)
