@@ -44,12 +44,62 @@
 // let mySize: Size = Size.Medium;
 // console.log(mySize);
 
-function calculateTax(income: number, taxYear = 2022): number {
-    //return 0;
-    //let x;
-    if (taxYear < 2022)
-        return income * 1.2;
-    return income * 1.3;
+// function calculateTax(income: number, taxYear = 2022): number {
+//     //return 0;
+//     //let x;
+//     if (taxYear < 2022)
+//         return income * 1.2;
+//     return income * 1.3;
+// }
+// // if nothing is declared for taxYear, defaults to 2022, otherwise overrides 2022
+// calculateTax(10_000, 2022)
+
+
+// type Employee = {
+//     readonly id: number,
+//     name: string,
+//     retire: (date: Date) => void  
+// }
+
+
+// let employee: Employee = {
+//     id : 1,
+//     name: 'Brett',
+//     retire: (date: Date) => {
+//         console.log(date)
+//     }
+// };
+
+// //employee.name = 'Brett';
+// //employee.id = 0;
+
+// function kgToLbs (weight: number | string): number {
+//     //narrowing
+//     if (typeof weight === 'number')
+//         return weight * 2.2;
+//     else {
+//         return parseInt(weight) * 2.2;
+//     }
+    
+// }
+
+// kgToLbs(10);
+// kgToLbs('10kg');
+
+//let weight: number & string;
+
+type Draggable = {
+    drag: () => void
 }
-// if nothing is declared for taxYear, defaults to 2022, otherwise overrides 2022
-calculateTax(10_000, 2022)
+
+type Resizable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
+}
+
